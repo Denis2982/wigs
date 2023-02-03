@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    color:#000
+}
+ul,
+ol,
+li {
+    list-style: none;
+    color: inherit;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+    max-width: 1440px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+.wrapper {    
+    display: grid;
+    grid-template-columns: 252px 1fr ;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        'sidebar header '
+        'sidebar main ';
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(42px);   
+}
+.header {
+    grid-area: header;  
+    display: grid;
+    grid-template-columns: minmax(auto, 1050px) 1fr; 
+    padding: 46px 0 49px; 
+    justify-items: end;
+    gap: 11px;
+}
+.header__menu {    
+    font-size: 17px;
+    line-height: 21px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+    gap: 42px;
+}
+.header__user {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25px;   
+    padding-right: 52px;
+    padding-top: 3px;    
+}
+.sidebar { 
+    grid-area: sidebar;  
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 55px;
+}
+.logo-img {
+    padding: 51px 96px 0 56px;
+}
+.title {    
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    padding: 0 58px;
+}
+.sidebar__menu {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 26px;    
+}
+.sidebar__menu li {
+    margin-left: 60px;
+}
+.sidebar__link-img {
+    position: relative;
+    top: 10px;
+    padding-right: 12px;
+}
+.main { 
+    margin: 20px 37px 64px;
+    max-width: 1100px;
+    grid-area: main; 
+    display: grid;
+    align-items: stretch;
+    gap: 21px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);   
+    grid-template-areas: 'img1 img1 img3 img4'
+                         'img2 img2 img3 img4'
+                         'img5 img6 img7 img7'
+                         'img5 img6 img8 img8';
+}
+.main img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.img1 {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}
+.img5 {
+    grid-area: img5;
+}
+.img6 {
+    grid-area: img6;
+}
+.img7 {
+    grid-area: img7;
+}
+.img8 {
+    grid-area: img8;
+}
+
