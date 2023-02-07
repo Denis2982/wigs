@@ -49,6 +49,23 @@ body {
     justify-items: end;
     gap: 42px;
 }
+.menu-item {
+    position: relative;
+}
+.menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    display: block;   
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-in;
+}
+.menu-item:hover::after {
+    width: 100%;   
+}
 .header__user {
     display: grid;
     grid-auto-flow: column;
@@ -79,6 +96,12 @@ body {
 }
 .sidebar__menu li {
     margin-left: 60px;
+    transition: all 0.3s;
+}
+.sidebar__menu li:hover {
+    transform: scaleX(1.1);
+    font-weight: 700;
+    text-shadow: 1px 1px 0 #acaaaa, 2px 2px 0 #acaaaa, 3px 3px 0 #acaaaa, 4px 4px 0 #acaaaa;
 }
 .sidebar__link-img {
     position: relative;
@@ -103,6 +126,11 @@ body {
     max-width: 100%;
     object-fit: cover;
     border-radius: 12px;
+    transition: transform 0.2s ease-in;
+}
+.main img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
 }
 .img1 {
     grid-area: img1;
